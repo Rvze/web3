@@ -1,0 +1,32 @@
+<div class="resultTable" id="resultTable" xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:f="http://java.sun.com/jsf/core">
+    <h:dataTable value="#{resTable.points}" var="points" class="table table-success table-striped"
+    >
+        <h:column>
+            <f:facet name="header">X</f:facet>
+            <h:outputText value="#{points.x}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">Y</f:facet>
+            <h:outputText value="#{points.y}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">R</f:facet>
+            <h:outputText value="#{points.r}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">Exc time</f:facet>
+        </h:column>
+        <h:column>
+            <f:facet name="header">Cur time</f:facet>
+            <h:outputText value="#{points.time}"/>
+
+        </h:column>
+        <h:column>
+            <f:facet name="header">Result</f:facet>
+            <h:outputText value="#{points.hit}"/>
+        </h:column>
+    </h:dataTable>
+
+
+</div>

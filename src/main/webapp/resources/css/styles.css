@@ -1,0 +1,16 @@
+
+
+header {
+    margin: 10px 0px 0px 0px;
+    font-family: Arial, serif;
+    color: #ffffff;
+    text-align: center;
+    background-color: #176317;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+.ui-analog-clock {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10em;
+}

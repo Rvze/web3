@@ -1,0 +1,61 @@
+<h:form xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:f="http://java.sun.com/jsf/core"
+>
+    <p>Координата X:</p>
+    <h:panelGrid id="x-item" columns="1" style="margin-bottom: 10px">
+        <p:inputText id="decimal" value="#{point.x}"/>
+        <p:slider for="decimal" minValue="-5" maxValue="5" step="0.1" range="max"/>
+    </h:panelGrid>
+    <p>Кооридана Y:</p>
+    <h:inputText class="form-control" value="#{point.y}" maxlength="8" alt="(-3...5)" size="10" id="item-y"/>
+    <p>Радиус R:</p>
+    <h:inputText value="#{point.r}" id="rInput" style="display: none" onchange="changeR()"/>
+    <table>
+        <tbody>
+        <tr>
+            <td><label>
+                <h:commandButton class="btn btn-light me-2" value="1" type="button" partialSubmit="true"
+                                 onclick="setR(1.0)">
+                    <f:ajax/>
+                </h:commandButton>
+            </label></td>
+
+            <td><label>
+                <h:commandButton class="btn btn-light me-2" value="2" type="button" partialSubmit="true"
+                                 onclick="setR(2.0)">
+                    <f:ajax/>
+                </h:commandButton>
+            </label></td>
+
+            <td><label>
+                <h:commandButton class="btn btn-light me-2" value="3" type="button" partialSubmit="true"
+                                 onclick="setR(3.0)">
+                    <f:ajax/>
+                </h:commandButton>
+            </label></td>
+
+            <td><label>
+                <h:commandButton class="btn btn-light me-2" value="4" type="button" partialSubmit="true"
+                                 onclick="setR(4.0)">
+                    <f:ajax/>
+                </h:commandButton>
+            </label></td>
+
+            <td><label>
+                <h:commandButton class="btn btn-light me-2" value="5" type="button" partialSubmit="true"
+                                 onclick="setR(5.0)">
+                    <f:ajax/>
+                </h:commandButton>
+            </label></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="buttons">
+        <h:commandButton class="btn btn-success me-3" value="Submit" id="submit" type="submit" onclick="validate()"
+                         action="#{resTable.add}"/>
+        <h:commandButton class="btn btn-success me-3" value="Reset Table" id="reset" type="submit"
+                         action="#{resTable.clear}"/>
+    </div>
+</h:form>
